@@ -1,0 +1,268 @@
+<!-- ═══════════════════════════════════════════════════════
+     CARACTERISTICAS — 3 bloques: Blanco · Negro · Blanco
+     ═══════════════════════════════════════════════════════ -->
+
+<!-- ══ BLOQUE 1: Editorial Blanco ══ -->
+<section class="bg-white text-black pt-12 pb-16 px-8 md:px-14 relative overflow-hidden">
+  
+  <!-- Encabezado superior -->
+  <div class="flex justify-between items-start mb-12">
+    <p class="font-medium text-black text-sm tracking-wide">Rendimiento</p>
+    <p class="font-bold text-black text-sm tracking-wide">Series <span class="text-red-600">●</span></p>
+  </div>
+
+  <!-- Contenedor Principal (Textos + Imágenes) -->
+  <div class="relative w-full max-w-[1300px] mx-auto">
+
+    <!-- Textos Principales Alineados a la Izquierda -->
+    <div class="relative z-10">
+      <h2 class="font-black leading-none tracking-tighter uppercase">
+        <span class="block text-5xl md:text-6xl mb-2">IR-14 &nbsp;/5</span>
+        <span class="block text-6xl md:text-[6rem] lg:text-[7.5rem] ml-12 md:ml-24">RENDIMIENTO</span>
+      </h2>
+    </div>
+
+    <!-- Texto de Fondo "MARCO 21" -->
+    <div class="absolute top-[80px] md:top-[120px] left-0 w-full flex justify-between z-0 pointer-events-none select-none">
+      <span class="font-black text-neutral-100 leading-none tracking-tighter text-[7rem] md:text-[9rem] lg:text-[11rem]">
+        MARCO
+      </span>
+      <span class="font-black text-neutral-100 leading-none tracking-tighter text-[7rem] md:text-[9rem] lg:text-[11rem]">
+        21
+      </span>
+    </div>
+
+    <!-- Enlace lateral derecho "VER COLECCIÓN" -->
+    <div class="absolute right-0 top-[160px] md:top-[180px] z-20">
+      <a href="#" class="text-[10px] font-bold uppercase tracking-widest text-black hover:text-red-600 transition">
+        VER COLECCIÓN
+      </a>
+    </div>
+
+    <!-- Galería de imágenes (Limpias, sin sombras) -->
+    <div class="flex gap-4 md:gap-6 ml-16 md:ml-40 mt-8 md:mt-10 relative z-10">
+      <div class="w-56 h-40 md:w-72 md:h-52 bg-neutral-200 overflow-hidden">
+        <img src="/ch3.jpg" alt="Detalle lente 1" class="w-full h-full object-cover object-center" />
+      </div>
+      <div class="w-56 h-40 md:w-72 md:h-52 bg-neutral-200 overflow-hidden">
+        <img src="/ch4.jpg" alt="Detalle lente 2" class="w-full h-full object-cover object-center" />
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Sección Inferior: Filtros a la izq y SD-21 a la der -->
+  <div class="mt-20 flex flex-col md:flex-row justify-between items-end max-w-[1300px] mx-auto relative z-10">
+    
+    <!-- Filtros iterados con @for -->
+    <div class="flex flex-wrap gap-2 max-w-lg mb-8 md:mb-0">
+      @for (filtro of filtros(); track filtro.label) {
+        <span class="text-[11px] font-semibold px-4 py-1.5 rounded-full border cursor-pointer transition-colors duration-200"
+              [class]="filtro.activo
+                ? 'bg-red-600 text-white border-red-600 shadow-md shadow-red-600/20'
+                : 'bg-white text-neutral-500 border-neutral-300 hover:bg-neutral-50'">
+          {{ filtro.label }}
+        </span>
+      }
+    </div>
+
+    <!-- Cifra grande SD - 21 -->
+    <div class="flex flex-col items-end">
+      <div class="flex items-baseline gap-6 md:gap-10">
+        <span class="text-7xl md:text-[6rem] lg:text-[8rem] font-black tracking-tighter text-black leading-none">SD</span>
+        <span class="text-7xl md:text-[6rem] lg:text-[8rem] font-light text-black leading-none tracking-tighter">—21</span>
+      </div>
+      <!-- Barra roja debajo del 21 (como en la maqueta) -->
+      <div class="h-3 md:h-4 bg-red-600 w-full mt-4" style="max-width: 80%;"></div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ══ BLOQUE 2: Negro + rojo como la referencia ══ -->
+<section class="bg-black text-white overflow-hidden">
+
+  <!-- ── FILA 1: SD / 21 gigante sobre fondo negro ── -->
+  <div class="relative px-8 md:px-14 pt-10 pb-4 bg-black">
+    <!-- Texto amarillo arriba derecha -->
+    <p class="absolute top-10 right-14 text-yellow-400 font-bold text-xs
+              leading-snug text-right z-10" style="max-width: 130px;">
+      ↗ Diseñados<br />para una vision<br />en su punto maximo
+    </p>
+    <!-- SD / 21 tipografía masiva -->
+    <h2 class="font-black leading-none text-white"
+        style="font-size: clamp(6rem, 20vw, 15rem); letter-spacing: -0.05em; line-height: 0.85;">
+      SD / 21
+    </h2>
+  </div>
+
+  <!-- ── GRID 3 COLUMNAS: EXACTAMENTE COMO LA REFERENCIA ── -->
+  <div class="mx-8 md:mx-14 border-t border-white/10 grid grid-cols-3 mb-16">
+
+    <!-- ── ROW 1: TOP ── -->
+    
+    <!-- Row 1, Col 1: Info -->
+    <div class="border-r border-b border-white/10 p-6 md:p-8 flex flex-col justify-end min-h-[160px]">
+      <p class="text-xs text-white/40 leading-relaxed">
+        Visión de precisión en cada detalle.<br />
+        Ir-14 /5 &nbsp; SD-21 &nbsp; 98K+ clientes.
+      </p>
+    </div>
+
+    <!-- Row 1, Col 2: Tarjeta Enfocado -->
+    <div class="border-r border-b border-white/10 p-6 md:p-8 flex flex-col justify-end min-h-[160px]">
+      <div class="flex items-center gap-3 rounded-xl px-4 py-2 mb-3"
+           style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); width: fit-content;">
+        <span class="shrink-0 rounded-full bg-yellow-400" style="width:10px; height:10px;"></span>
+        <p class="text-white font-bold text-[0.65rem] tracking-[0.1em]">Enfocado ——— ⊕</p>
+      </div>
+      <p class="text-white/65 text-xs leading-relaxed pl-1">
+        Rendimiento que se siente.<br />Visión que avanza.
+      </p>
+    </div>
+
+    <!-- Row 1, Col 3: Oscuro/Vacío -->
+    <div class="border-b border-white/10 min-h-[160px]">
+      <!-- Espacio intencionalmente vacío según la maqueta -->
+    </div>
+
+    <!-- ── ROW 2: BOTTOM ── -->
+
+    <!-- Row 2, Col 1: Fondo Rojo + Iconos + Texto IR-14 -->
+    <div class="border-r border-white/10 p-6 md:p-8 flex flex-col justify-between min-h-[380px]"
+         style="background: linear-gradient(160deg, #dc2626 0%, #991b1b 50%, #450a0a 100%);">
+      <div>
+        <div class="flex gap-3 text-white/30 text-base mb-4">
+          <span class="cursor-pointer hover:text-white transition">◎</span>
+          <span class="cursor-pointer hover:text-white transition">◆</span>
+          <span class="cursor-pointer hover:text-white transition">✕</span>
+          <span class="cursor-pointer hover:text-white transition">○</span>
+        </div>
+        <p class="text-white/40 font-bold uppercase leading-relaxed"
+           style="font-size: 0.55rem; letter-spacing: 0.1em;">
+          INNOVACIÓN · RENDIMIENTO ·<br />TECNOLOGÍA · ESTILO · VISIÓN<br />SIN LÍMITES
+        </p>
+      </div>
+      <h3 class="font-black uppercase text-white leading-tight mt-12"
+          style="font-size: clamp(1.4rem, 2.5vw, 2.2rem);">
+        IR-14 &nbsp;/5<br />MARCO DE<br />RENDIMIENTO
+      </h3>
+    </div>
+
+    <!-- Row 2, Col 2: Imagen ch2.jpg dictando la altura de la fila -->
+    <div class="border-r border-white/10 relative overflow-hidden">
+      <!-- Al quitar absolute y h-full, la imagen dicta el alto natural y no se recorta -->
+      <img src="/ch2.jpg"
+           class="w-full h-auto block"
+           alt="Modelo con gafas" />
+    </div>
+
+    <!-- Row 2, Col 3: Oscuro + 98K+ esquina -->
+    <div class="p-6 md:p-8 flex flex-col justify-end items-end relative min-h-[380px]">
+      <p class="font-black text-white" style="font-size: 3rem; line-height: 1;">
+        98K+
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+<!-- ══ BLOQUE 3: Minimalismo blanco inferior ══ -->
+<section class="bg-white text-black py-16 px-8 md:px-14">
+
+  <!-- Texto editorial centrado -->
+  <div class="text-center border-b border-neutral-100 pb-10 mb-12">
+    <p class="text-lg md:text-xl font-semibold leading-relaxed text-neutral-900 max-w-2xl mx-auto">
+      Diseñado para la claridad, la precisión y el uso diario.<br />
+      Rendimiento que se adapta a cómo ves y te mueves.
+    </p>
+    <p class="text-xs text-neutral-400 tracking-widest uppercase mt-3">
+      Un nuevo estándar en rendimiento visual.
+    </p>
+  </div>
+
+  <!-- Cabecera de 2 labels (izquierda y derecha) -->
+  <div class="flex justify-between mb-8">
+    <p class="text-[10px] font-bold uppercase tracking-widest text-neutral-400">
+      Rendimiento en<br />cada detalle
+    </p>
+    <p class="text-[10px] font-bold uppercase tracking-widest text-neutral-400 text-right">
+      Visión · Tecnología · Estilo<br />IR-14 · SD-21 · 98K+ Clientes
+    </p>
+  </div>
+
+  <!-- Grid de 3 columnas: izquierda / centro / derecha -->
+  <div class="grid grid-cols-3 gap-8 items-start">
+
+    <!-- ── Columna 1: Logo + tags + botón ── -->
+    <div class="flex flex-col gap-5">
+      <!-- Logo ◎ -->
+      <div class="text-3xl font-black">◎</div>
+
+      <!-- Tags pequeños -->
+      <div class="flex flex-wrap gap-2">
+        <span class="text-[11px] font-medium border border-neutral-200 text-neutral-600 px-3 py-1 rounded-full">
+          Innovación
+        </span>
+        <span class="text-[11px] font-medium border border-neutral-200 text-neutral-600 px-3 py-1 rounded-full">
+          Rendimiento Serie
+        </span>
+      </div>
+
+      <!-- Botón + -->
+      <button class="w-9 h-9 rounded-full border-2 border-neutral-300
+                     flex items-center justify-center
+                     text-xl font-light text-neutral-400
+                     hover:border-red-500 hover:text-red-500
+                     transition cursor-pointer bg-transparent">
+        +
+      </button>
+    </div>
+
+    <!-- ── Columna 2: Lista de palabras + foto del modelo ── -->
+    <div class="flex flex-col gap-6">
+      <!-- Lista vertical de conceptos -->
+      <div class="flex flex-col gap-1 border-l-2 border-neutral-100 pl-4">
+        <p class="text-[11px] font-bold uppercase tracking-widest text-neutral-400">Claridad Visual.</p>
+        <p class="text-[11px] font-bold uppercase tracking-widest text-neutral-400">Rendimiento.</p>
+        <p class="text-[11px] font-bold uppercase tracking-widest text-neutral-400">Comodidad.</p>
+      </div>
+
+      <!-- Foto del modelo con gorra y gafas rojas -->
+      <div class="w-full aspect-[3/4] max-w-[180px] rounded-2xl overflow-hidden border border-neutral-100">
+        <img src="/h3.jpg" alt="Modelo con gafas rojas"
+             class="w-full h-full object-cover object-top" />
+      </div>
+    </div>
+
+    <!-- ── Columna 3: ENFOQUE / PRECISIÓN ── -->
+    <div class="flex flex-col gap-4 pt-1">
+      <p class="text-[11px] font-bold uppercase tracking-widest text-neutral-400">Enfoque</p>
+
+      <h2 class="text-5xl md:text-6xl font-black uppercase leading-none tracking-tight">
+        ENFOQUE <span class="text-red-600">●</span>
+      </h2>
+
+      <!-- Línea roja horizontal -->
+      <div class="h-1 w-full bg-red-600 rounded-full"></div>
+
+      <h2 class="text-5xl md:text-6xl font-black uppercase leading-none tracking-tight text-red-600">
+        PRECISIÓN
+      </h2>
+
+      <p class="text-sm text-neutral-600 leading-relaxed mt-2">
+        Ajuste perfecto. <strong class="text-black underline">Visionary</strong>.<br />
+        Estilo en cada momento.
+      </p>
+    </div>
+
+  </div>
+</section>
+

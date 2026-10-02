@@ -1,0 +1,85 @@
+<!-- PORTADA: Hero rojo con imagen de fondo fusionada -->
+<section class="bg-red-600 relative overflow-hidden text-white min-h-[90vh]
+                flex flex-col justify-between pt-[60px]">
+
+  <!-- Imagen de fondo (mix-blend-multiply se funde con el rojo) -->
+  <img src="/ch1.png" alt="Modelo con gafas futuristas"
+       class="absolute inset-0 w-full h-full object-cover object-top
+              mix-blend-multiply opacity-90 pointer-events-none select-none" />
+
+  <!-- Capa de gradiente para oscurecer bordes -->
+  <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60 pointer-events-none"></div>
+
+  <!-- ── FILA SUPERIOR: stats + tarjeta HUD ── -->
+  <div class="relative z-10 flex justify-between items-start p-8 md:p-14">
+
+    <!-- Columna izquierda: editorial pequeño + número gigante -->
+    <div class="flex flex-col gap-4 max-w-xs">
+      <p class="text-[11px] font-semibold uppercase tracking-widest text-white/60">
+        Visión que se adapta a ti.<br />Estilo, claridad y tecnología — Siéntela.
+      </p>
+
+      <div class="flex items-end gap-3 mt-6">
+        <span class="text-8xl md:text-9xl font-black tracking-tighter leading-none text-yellow-400 drop-shadow-lg">
+          25+
+        </span>
+        <span class="text-[11px] text-white/70 font-medium leading-snug mb-2">
+          Años de<br />experiencia
+        </span>
+      </div>
+    </div>
+
+    <!-- Tarjeta HUD flotante -->
+    <div class="bg-black/85 backdrop-blur-md border border-white/10
+                p-5 rounded-2xl max-w-[280px] w-full flex flex-col gap-4">
+
+      <!-- Fila: etiqueta + badge Nuevo -->
+      <div class="flex items-center justify-between">
+        <span class="text-[11px] font-semibold uppercase tracking-widest text-white/50">Serie F-1</span>
+        <span class="text-[10px] font-bold bg-yellow-400 text-black px-2.5 py-0.5 rounded-full">Nuevo</span>
+      </div>
+
+      <!-- Texto y badges -->
+      <div>
+        <p class="text-xs text-white/50 mb-2">Rendimiento mejorado</p>
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-[10px] font-medium border border-white/20 text-white/70 px-3 py-1 rounded-full cursor-pointer hover:bg-white/10 transition">
+            Ver más
+          </span>
+          <span class="text-[10px] font-semibold bg-yellow-400 text-black px-3 py-1 rounded-full">
+            Comodidad todo el día
+          </span>
+        </div>
+      </div>
+
+      <!-- Separador -->
+      <div class="border-t border-white/10"></div>
+
+      <!-- 98K + avatares -->
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-3xl font-black text-white leading-none">98K+</p>
+          <p class="text-[10px] text-white/40 mt-0.5">Clientes satisfechos</p>
+        </div>
+
+        <!-- Mini avatares circulares superpuestos -->
+        <div class="flex -space-x-2">
+          @for (av of avatares(); track av.src) {
+            <div class="w-8 h-8 rounded-full overflow-hidden border-2 border-black">
+              <img [src]="av.src" [alt]="av.alt" class="w-full h-full object-cover object-center" />
+            </div>
+          }
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── RÓTULO MONUMENTAL INFERIOR ── -->
+  <div class="relative z-10 px-8 md:px-14 pb-12 text-center">
+    <h1 class="text-3xl md:text-5xl font-bold leading-tight tracking-tight">
+      El rendimiento<br />comienza con la visión<sup class="text-lg">®</sup>
+    </h1>
+  </div>
+
+</section>
